@@ -1,0 +1,55 @@
+# CSS Selectors
+CSS Selectors are how we select the elements on the page that we want to style.
+
+## Types of CSS Selectors
+
+### 1. The Type Selector
+The type selector selects all elements of a given type. For example, to select all `<p>` elements:
+```css
+p { 
+    color: blue; 
+}
+```
+
+```html
+<p>This paragraph will have a blue text color.</p>
+<div>This div will not be affected.</div>
+```
+#### When to Use
+The type selector is useful when you want to apply styles to all elements of a specific type across your webpage.
+
+### 2. The Class Selector
+The class selector selects all elements with a specific class attribute. Classes are defined in HTML using the `class` attribute.
+
+
+```css filename="class-selector.css"
+.my-class {
+    font-size: 20px;
+    color: red;
+}
+```
+
+```html filename="class-selector.html"
+<p class="my-class">The text here will have a font size of 20px and a color of red.</p>
+<p>This paragraph will not be affected.</p>
+```
+
+#### When to Use
+The class selector is useful when you want to apply the same styles to multiple elements without affecting other elements of the same type.
+
+### 3. The ID Selector
+The ID selector selects a single element with a specific ID attribute. IDs are defined in HTML using the `id` attribute.
+```css filename="id-selector.css"
+#my-id {
+    background-color: yellow;
+    padding: 10px;
+}
+``` 
+
+```html filename="id-selector.html"
+<div id="my-id">This div will have a yellow background and 10px padding.</div>
+<div>This div will not be affected.</div>
+```
+
+#### When to Use
+The ID selector is useful when you want to apply styles to a unique element (element that only appears once) on the page. Unique elements would be for example a navigation bar or footer section.

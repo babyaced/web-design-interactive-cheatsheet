@@ -1,0 +1,21 @@
+{
+  "dependencies": {
+    "@codesandbox/sandpack-react": "^2.20.0",
+    "@codesandbox/sandpack-themes": "^2.0.21",
+    "next": "^16.0.0",
+    "nextra": "^4.6.0",
+    "nextra-theme-docs": "^4.6.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "react-live": "^4.1.8"
+  },
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "postbuild": "pagefind --site .next/server/app --output-path public/_pagefind"
+  },
+  "devDependencies": {
+    "pagefind": "^1.4.0"
+  }
+}

@@ -1,0 +1,31 @@
+import HTMLCSSJSPlayground from '../../../../components/HTMLCSSJSPlayground';
+
+# Advanced CSS Selectors
+Advanced CSS selectors allow you to select elements based on more specific criteria than just type, class, or ID. Here are some commonly used advanced selectors:
+
+## 1. Universal Selector
+The universal selector (`*`) selects all elements on the page.
+```css
+* {
+    margin: 0;
+    padding: 0;
+}
+```
+#### When to Use
+
+The universal selector should be used very rarely on it, its mainly used in CSS resets ([what are css resets?](https://en.wikipedia.org/wiki/Reset_style_sheet)) to remove margin and change the default `box-sizing` property of all elements to `border-box` (see this [video](https://www.youtube.com/watch?v=WlGQdgy-M6w) for why you might want this )
+*However* the universal selector can be useful when used in combination with other selectors (like in the example below)
+
+#### Example: Form with Disabled Elements
+
+<HTMLCSSJSPlayground folderPath={"CSS/Selectors/AdvancedCSSSelectors/UniversalSelector"} />
+
+The above selector will select all disabled elements (the disabled buttons and input fields) and apply the styles to them. The styles make the disabled elements look different from enabled elements by making them semi-transparent and changing the cursor to indicate that they are not interactive.
+
+## 2. Attribute Selector
+Attribute selectors allow you to select elements based on the presence or value of an attribute.
+
+<HTMLCSSJSPlayground folderPath={"CSS/Selectors/AdvancedCSSSelectors/AttributeSelector"} />
+
+#### When to Use
+Attribute selectors are useful when you want to apply styles to elements based on their attributes or attribute values. They can be particularly handy for styling form elements, links, and other components where attributes convey important information. For example, you might use an attribute selector to style all text inputs with a specific placeholder text or to target links that open in a new tab.

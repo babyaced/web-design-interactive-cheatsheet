@@ -1,0 +1,20 @@
+# The Grid Container
+The grid container is the element in which all your grid items live. To create a grid container, you need to set the `display` property of an element to `grid`. 
+After that you can use many other CSS properties to define the structure and behavior of your grid.
+
+## Grid Container Properties
+
+### Defining the Number of Columns (`grid-template-columns`) and Rows (`grid-template-rows`)
+
+You can define the number of columns in your grid using the `grid-template-columns` property. The syntax for these properties are as follows:
+
+- The number of columns/rows is the number of values you provide.
+    - Each value must be separated by a space.
+- Each value represents the width of a column.
+    - Each value must be a valid CSS length unit (e.g., `px`, `%`, `fr`, `em`, etc.).
+
+<HTMLCSSJSPlayground folderPath={"CSS/Layout/Grid/GridContainer"} />
+
+In the above example, the grid container will have three columns with widths of 100 pixels, 200 pixels, and 100 pixels respectively.
+
+### Example
