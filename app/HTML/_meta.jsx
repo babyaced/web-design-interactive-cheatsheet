@@ -1,3 +1,3 @@
 export default {
-  index: 'What is HTML',
+  index: 'What is HTML?',
 }

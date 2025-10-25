@@ -1,0 +1,39 @@
+import { Callout } from 'nextra/components'
+
+# What are CSS Properties?
+CSS properties are the individual aspects of an element's style that can be modified using CSS. Each property has a specific name and accepts certain values that determine how the property affects the appearance of the element.
+
+## CSS Property Structure
+A CSS property is defined within a declaration block of a CSS rule. The structure of a CSS property is as follows:
+```css
+property: value;
+```
+
+- **Property**: This is the name of the CSS property you want to modify (e.g., `color`, `font-size`, `margin`, etc.).
+    - Property names are always written in lowercase and use hyphens `-` to separate multiple words.
+- **Value**: This is the specific value you want to assign to the property (e.g., `red`, `16px`, `10px`, etc.).
+    - Values can be keywords, lengths, colors, percentages, URLs, and more, depending on the property. You'll have to refer to the documentation for each property to see what values are accepted.
+- **Semicolon (`;`)**: Each property-value pair ends with a semicolon to separate it from the next declaration in the block.
+
+### Shorthands
+Some CSS properties have shorthand versions that allow you to set multiple related properties in a single declaration. For example, the `margin` property is a shorthand for setting the `margin-top`, `margin-right`, `margin-bottom`, and `margin-left` properties all at once.
+So this:
+```css
+margin-top: 10px;
+margin-right: 15px;
+margin-bottom: 10px;
+margin-left: 15px;
+```
+Can be written as:
+```css
+margin: 10px 15px;
+```
+
+Look out for these shorthands as they can make your CSS files shorter and easier to read. We will cover some useful shorthands in this section as well.
+
+
+
+<Callout type="warning">
+There are hundreds of CSS properties available. Because of this we will only cover some of the most important and commonly used properties in this section.
+</Callout>
+

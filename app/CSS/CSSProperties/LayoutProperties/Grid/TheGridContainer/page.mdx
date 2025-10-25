@@ -1,3 +1,5 @@
+import HTMLCSSJSPlayground from '../../../../../../components/HTMLCSSJSPlayground';
+
 # The Grid Container
 The grid container is the element in which all your grid items live. To create a grid container, you need to set the `display` property of an element to `grid`. 
 After that you can use many other CSS properties to define the structure and behavior of your grid.
@@ -13,8 +15,25 @@ You can define the number of columns in your grid using the `grid-template-colum
 - Each value represents the width of a column.
     - Each value must be a valid CSS length unit (e.g., `px`, `%`, `fr`, `em`, etc.).
 
-<HTMLCSSJSPlayground folderPath={"CSS/Layout/Grid/GridContainer"} />
-
 In the above example, the grid container will have three columns with widths of 100 pixels, 200 pixels, and 100 pixels respectively.
 
 ### Example
+<HTMLCSSJSPlayground folderPath={"CSS/Layout/Grid/GridContainer"} />
+
+
+#### The fractional unit (`fr`)
+The `fr` unit is a flexible length unit that represents a fraction of the available space in the grid container. It is an easy way to divide space among grid columns or rows.
+
+
+#### Example
+<HTMLCSSJSPlayground folderPath={"CSS/Layout/Grid/GridContainer"} />
+
+### Setting Gaps Between Rows and Columns (`gap`, `row-gap`, `column-gap`)
+You can set gaps between rows and columns in your grid using the `gap`, `row-gap`, and `column-gap` properties.
+#### Example
+<HTMLCSSJSPlayground folderPath={"CSS/Layout/Grid/GridContainerGaps"} />
+
+
+
+
+

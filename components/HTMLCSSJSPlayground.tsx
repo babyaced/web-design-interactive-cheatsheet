@@ -22,13 +22,13 @@ export default function HtmlCssJsPlayground({ folderPath, includeJavascript = fa
           getText(`/demos/${folderPath}/index.html`),
           getText(`/demos/${folderPath}/styles.css`),
           includeJavascript ? getText(`/demos/${folderPath}/script.js`) : Promise.resolve(""),
-          getText(`/demos/${folderPath}/base.css`),
+          // getText(`/demos/${folderPath}/base.css`),
         ])
         setFiles({
           "/index.html": { code: html },
           "/styles.css": { code: css },
           "/script.js": { code: js },
-          "/base.css": { code: baseCss },
+          // "/base.css": { code: baseCss },
         })
       } catch (e: any) {
         setError(e.message || String(e))

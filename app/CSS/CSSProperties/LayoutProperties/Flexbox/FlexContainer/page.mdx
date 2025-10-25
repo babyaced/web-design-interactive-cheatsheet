@@ -1,0 +1,54 @@
+# What is a Flex Container?
+A flex container is the element that holds all your flex items. 
+
+## How to Create a Flex Container
+To create a flex container, you need to set the `display` property of an element to `flex` or `inline-flex'.
+
+### Example
+{/* <HTMLCSSJSPlayground folderPath={"CSS/Layout/Flexbox/FlexContainer"} /> */}
+
+## Flex Container Properties
+
+### Defining the Direction of Flex Items (`flex-direction`)
+You can define the direction in which the flex items are laid out using the `flex-direction` property. The most common values used are:
+- `row` (default): Flex items are laid out in a row, from left to right.
+- `column`: Flex items are laid out in a column, from top to bottom.
+
+You can also layout the flex items in reverse order (from how they are written in the HTML) using:
+- `row-reverse`: Flex items are laid out in a row, from right to left.
+- `column-reverse`: Flex items are laid out in a column, from bottom to top.
+#### Example
+{/* <HTMLCSSJSPlayground folderPath={"CSS/Layout/Flexbox/FlexContainerFlexDirection"} /> */}
+
+### Wrapping Flex Items (`flex-wrap`)
+By default, flex items will try to fit into one line. You can change this behavior using the `flex-wrap` property. The most common values used are:
+- `nowrap` (default): All flex items will be on one line.
+- `wrap`: Flex items will wrap onto multiple lines, from top to bottom.
+- `wrap-reverse`: Flex items will wrap onto multiple lines, from bottom to top.
+#### Example
+{/* <HTMLCSSJSPlayground folderPath={"CSS/Layout/Flexbox/FlexContainerFlexWrap"} /> */}
+
+### Aligning Flex Items Along the Main Axis (`justify-content`)
+You can align the flex items along the main axis (the direction defined by `flex-direction`) using the `justify-content` property. The most common values used are:
+- `flex-start` (default): Flex items are packed toward the start of the main axis.
+- `flex-end`: Flex items are packed toward the end of the main axis.
+- `center`: Flex items are centered along the main axis.
+- `space-between`: Flex items are evenly distributed in the line; first item is on the start line, last item on the end line.
+- `space-around`: Flex items are evenly distributed in the line with equal space around them.
+#### Example
+{/* <HTMLCSSJSPlayground folderPath={"CSS/Layout/Flexbox/FlexContainerJustifyContent"} /> */}
+
+### Aligning Flex Items Along the Cross Axis (`align-items`)
+You can align the flex items along the cross axis (perpendicular to the main axis) using the `align-items` property. The most common values used are:
+- `stretch` (default): Flex items are stretched to fill the container.
+- `flex-start`: Flex items are aligned to the start of the cross axis.
+- `flex-end`: Flex items are aligned to the end of the cross axis.
+- `center`: Flex items are centered along the cross axis.
+
+#### Example
+{/* <HTMLCSSJSPlayground folderPath={"CSS/Layout/Flexbox/FlexContainerAlignItems"} /> */}
+
+### Setting Gaps Between Flex Items (`gap`, `row-gap`, `column-gap`)
+You can set gaps between flex items using the `gap`, `row-gap`, and `column-gap` properties.
+#### Example
+{/* <HTMLCSSJSPlayground folderPath={"CSS/Layout/Flexbox/FlexContainerGaps"} /> */}
