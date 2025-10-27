@@ -26,12 +26,24 @@ The `fr` unit is a flexible length unit that represents a fraction of the availa
 
 
 #### Example
-<HTMLCSSJSPlayground folderPath={"CSS/Layout/Grid/GridContainer"} />
+<HTMLCSSJSPlayground folderPath={"CSS/Layout/Grid/GridContainer/TheFractionalUnit"} />
+
+As you can see in the example above, the grid container has three columns.
+
+In total the grid container is divided into 4 equal parts (1fr + 2fr + 1fr = 4fr). The first and third columns each take up 1/4 of the available space, while the second column takes up 2/4 (or 1/2) of the available space.
+
+It may help to think about the `fr` unit as equivalent to percentages.
+
+The grid-template-columns property in the example above could also be written like this using percentages:
+
+```css
+grid-template-columns: 25% 50% 25%;
+```
 
 ### Setting Gaps Between Rows and Columns (`gap`, `row-gap`, `column-gap`)
 You can set gaps between rows and columns in your grid using the `gap`, `row-gap`, and `column-gap` properties.
 #### Example
-<HTMLCSSJSPlayground folderPath={"CSS/Layout/Grid/GridContainerGaps"} />
+<HTMLCSSJSPlayground folderPath={"CSS/Layout/Grid/GridContainer/Gap"} />
 
 
 

@@ -1,4 +1,45 @@
 # What are the Flex Items?
 Flex items are the direct children of a flex container. They can be positioned and sized within the flex container using various CSS properties.
 
+We will cover the most commonly used flex item properties below.
+
 ## Flex Item Properties
+
+### Alignment Properties
+#### The `justify-self` Property
+The `justify-self` property allows you to align individual flex items along the main axis (horizontal axis in a row layout, vertical axis in a column layout). The possible values are:
+
+- `auto` (default): The item inherits the alignment from the flex container's `justify-content` property.
+- `flex-start`: Aligns the item to the start of the main axis.
+- `flex-end`: Aligns the item to the end of the main axis.
+- `center`: Centers the item along the main axis.
+- `stretch`: Stretches the item to fill the container along the main axis.
+
+#### The `align-self` Property
+The `align-self` property allows you to align individual flex items along the cross axis (vertical axis in a row layout, horizontal axis in a column layout). The possible values are:
+
+- `auto` (default): The item inherits the alignment from the flex container's `align-items` property.
+- `flex-start`: Aligns the item to the start of the cross axis.
+- `flex-end`: Aligns the item to the end of the cross axis.
+- `center`: Centers the item along the cross axis.
+- `stretch`: Stretches the item to fill the container along the cross axis.
+
+### Flex Sizing Properties
+#### The `flex-grow` Property
+The `flex-grow` property specifies how much a flex item should grow relative to the other flex items in the container when there is extra space available. 
+
+The default value is `0`, meaning the item will not grow. 
+A value of `1` means the item will grow to fill the available space.
+
+#### The `flex-shrink` Property
+The `flex-shrink` property specifies how much a flex item should shrink relative to the other flex items in the container when there is not enough space available.
+The default value is `1`, meaning the item will shrink if necessary.
+A value of `0` means the item will not shrink.
+
+#### The `flex-basis` Property
+The `flex-basis` property specifies the initial size of a flex item before any growing or shrinking occurs. 
+It can be set to a specific length (e.g., `100px`, `20%`) or to `auto`, which means the item will size itself based on its content.
+
+ 
+
+

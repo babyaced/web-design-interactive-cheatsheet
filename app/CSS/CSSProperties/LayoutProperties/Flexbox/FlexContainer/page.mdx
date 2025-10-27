@@ -1,11 +1,27 @@
+import FlexContainerAxesRow from '../../../../../../assets/images/FlexContainerAxes-row.svg';
+import FlexContainerAxesColumn from '../../../../../../assets/images/FlexContainerAxes-column.svg';
+
+
 # What is a Flex Container?
 A flex container is the element that holds all your flex items. 
 
 ## How to Create a Flex Container
 To create a flex container, you need to set the `display` property of an element to `flex` or `inline-flex'.
 
-### Example
 {/* <HTMLCSSJSPlayground folderPath={"CSS/Layout/Flexbox/FlexContainer"} /> */}
+
+## The two axes of a Flex Container
+In a flex container, there are two axes that determine the layout of the flex items:
+- The **main axis**: This is the primary axis along which the flex items are laid out. The direction of the main axis is determined by the `flex-direction` property.
+- The **cross axis**: This is the axis perpendicular to the main axis. The cross axis is used for aligning flex items in the container.
+
+When the `flex-direction` of a flex container is set to `row`, the main axis runs horizontally (left to right), and the cross axis runs vertically (top to bottom). 
+<FlexContainerAxesRow alt="Flex Container Axes when flex-direction is set to row" className="w-full h-auto object-contain"/>
+
+When the `flex-direction` of a flex container is set to `column`, the main axis runs vertically (top to bottom), and the cross axis runs horizontally (left to right).
+
+<FlexContainerAxesColumn alt="Flex Container Axes when flex-direction is set to column" className="w-full h-auto object-contain"/>
+
 
 ## Flex Container Properties
 

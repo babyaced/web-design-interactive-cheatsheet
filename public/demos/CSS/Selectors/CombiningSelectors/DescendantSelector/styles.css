@@ -1,0 +1,6 @@
+/* All links that are descendants of the footer */
+footer a {
+  color: gray;
+  font-size: 0.9rem;
+  text-decoration: underline dotted;
+}

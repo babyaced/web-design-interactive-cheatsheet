@@ -1,3 +1,6 @@
+import HTMLTree from '../../../assets/images/HTMLTree.svg';
+import HTMLTreeWithLabels from '../../../assets/images/HTMLTreeWithLabels.svg';
+
 # The Document Object Model (DOM)
 
 The Document Object Model (DOM) is a programming interface for web documents. It represents the structure of an HTML document (a page) as a tree of objects.
@@ -31,6 +34,8 @@ In this example, the DOM tree structure would look like this:
             - "This is a sample paragraph."
 ```
 
+<HTMLTree alt="HTML Tree" className="w-full h-auto object-contain" style={{margin: '2em 0'}}/>
+
 Each level of indentation represents a parent-child relationship between elements. The `Document` is the root node (think of it as the oldest ancestor -- ie. your great-great-grandmother), and all other elements are its descendants.
 Think of the text content within the title as you and your cousins.
 
@@ -47,4 +52,6 @@ If we wanted to represent this same tree using that family metaphor, it would lo
             - Cousin ( "This is a sample paragraph." )
 ```
 
-The way this differs from a traditional family tree is that in the DOM tree, each element can have **multiple children** (like how a parent can have multiple kids), but each child can only have **one parent** (you only have one mom and one dad).
+<HTMLTreeWithLabels alt="HTML Tree with Family Labels" className="w-full h-auto object-contain" style={{margin: '2em 0'}}/>
+
+The way this differs from a traditional family tree is that in the DOM tree, each element can have **multiple children** (like how a parent can have multiple kids), but each child can only have **one parent** (you only have one mom or one dad, not both).

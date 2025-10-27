@@ -1,0 +1,59 @@
+import HTMLCSSJSPlayground from '../../../components/HTMLCSSJSPlayground';
+
+# What are Media Queries?
+Media queries are a CSS technique used to apply different styles to a web page based on the characteristics of the device or screen size being used to view it.
+They are commonly used in responsive web design to ensure that a website looks good and functions well on a variety of devices, from desktop computers to mobile phones.
+
+## How to Use Media Queries
+Media queries are defined using the `@media` rule in CSS. The basic syntax of a media query is as follows:
+```css
+@media (condition) {
+    /* CSS rules to apply when the condition is met */
+}
+```
+
+The `condition` specifies the criteria that must be met for the enclosed CSS rules to be applied. Common conditions include screen width, height, orientation, and resolution.
+
+Open up the following example in a new tab by clicking the CodeSandbox icon to see how media queries work in practice:
+
+### conditions
+The `condition` used in a media query can include various features, such as:
+- `min-width` and `max-width`: Apply styles based on the width ↔️ of the screen (viewport).
+- `min-height` and `max-height`: Apply styles based on the height ↕️ of the screen (viewport).
+- `orientation`: Apply styles based on the orientation 🔄 of the device (portrait or landscape).
+
+Most commonly, we use `min-width` and `max-width` to create breakpoints for different screen sizes, this is because on smaller screens the height typically isnt an issue as users can scroll down the page.
+`min-width` and `max-width` are simply written like a css property, but without a semicolon at the end.
+
+```css
+@media (min-width: 600px) {
+    /* CSS rules for screens wider than 600px */
+}
+@media (max-width: 599px) {
+    /* CSS rules for screens narrower than 600px */
+}
+```
+
+You can also use the greater than or equal to (`>=`) and less than or equal to (`<=`) symbols as shorthand for `min-` and `max-` respectively.
+
+```css
+@media (>= 600px) {
+    /* CSS rules for screens wider than or equal to 600px */
+}
+@media (<= 599px) {
+    /* CSS rules for screens narrower than or equal to 599px */
+}
+```
+
+### Example
+
+<HTMLCSSJSPlayground folderPath={"CSS/MediaQueries"} activeFile={"/styles.css"} />
+
+In the example above, we have defined two media queries:
+1. The first media query applies styles when the screen width is at least 250px. It changes the background color to lightblue.
+2. The second media query applies styles when the screen width is at least 400px. It changes the background color to lightgreen.
+
+When the screen width is less than 250px, the default background color of red is applied.
+
+You don't have to limit yourself to just changing the background color. The most common use of media queries is to adjust the *layout* of a webpage for different screen sizes.
+We'll get into how you can use media queries with layout properties like Flexbox and Grid in their respective sections.

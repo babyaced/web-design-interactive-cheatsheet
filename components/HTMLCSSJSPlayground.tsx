@@ -11,7 +11,7 @@ async function getText(filePath: string) {
   return res.text()
 }
 
-export default function HtmlCssJsPlayground({ folderPath, includeJavascript = false }: { folderPath: string, includeJavascript: boolean }) {
+export default function HtmlCssJsPlayground({ folderPath, includeJavascript = false, activeFile = '/index.html' }: { folderPath: string, includeJavascript: boolean, activeFile: string }) {
   const [files, setFiles] = useState<Record<string, { code: string }> | null>(null)
   const [error, setError] = useState<string | null>(null)
 
@@ -22,13 +22,13 @@ export default function HtmlCssJsPlayground({ folderPath, includeJavascript = fa
           getText(`/demos/${folderPath}/index.html`),
           getText(`/demos/${folderPath}/styles.css`),
           includeJavascript ? getText(`/demos/${folderPath}/script.js`) : Promise.resolve(""),
-          // getText(`/demos/${folderPath}/base.css`),
+          getText(`/demos/${folderPath}/base.css`),
         ])
         setFiles({
           "/index.html": { code: html },
           "/styles.css": { code: css },
           "/script.js": { code: js },
-          // "/base.css": { code: baseCss },
+          "/base.css": { code: baseCss },
         })
       } catch (e: any) {
         setError(e.message || String(e))
@@ -36,16 +36,20 @@ export default function HtmlCssJsPlayground({ folderPath, includeJavascript = fa
     })()
   }, [])
 
+
+
   if (error) return <pre style={{ color: "crimson" }}>{error}</pre>
   if (!files) return <div>Loading…</div>
 
   const visibleFiles = includeJavascript ? ["/index.html", "/styles.css", "/script.js"] : ["/index.html", "/styles.css", "/base.css"]
 
   return (
+    <div style={{ margin: "2em 0" }}>
     <SyncedSandpack
-      template="vanilla"
-      files={{...files,  "/index.js": { hidden: true, code: "" }}} // ⬅️ disables Sandpack’s default JS file
-      options={{ showTabs: true, editorHeight: 380, resizablePanels: true, visibleFiles: visibleFiles, activeFile:"/index.html" }}
+      template={"static"}
+      files={files} // ⬅️ disables Sandpack’s default JS file
+      options={{ showTabs: true, editorHeight: 380, resizablePanels: true, visibleFiles: visibleFiles, activeFile: activeFile }}
     />
+    </div>
   )
 }

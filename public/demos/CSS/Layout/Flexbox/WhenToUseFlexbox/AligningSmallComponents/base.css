@@ -1,0 +1,6 @@
+.flexbox-container *{
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: lightgray;
+    border-radius: 4px;
+}

@@ -12,7 +12,6 @@ property: value;
 - **Property**: This is the name of the CSS property you want to modify (e.g., `color`, `font-size`, `margin`, etc.).
     - Property names are always written in lowercase and use hyphens `-` to separate multiple words.
 - **Value**: This is the specific value you want to assign to the property (e.g., `red`, `16px`, `10px`, etc.).
-    - Values can be keywords, lengths, colors, percentages, URLs, and more, depending on the property. You'll have to refer to the documentation for each property to see what values are accepted.
 - **Semicolon (`;`)**: Each property-value pair ends with a semicolon to separate it from the next declaration in the block.
 
 ### Shorthands
@@ -30,6 +29,67 @@ margin: 10px 15px;
 ```
 
 Look out for these shorthands as they can make your CSS files shorter and easier to read. We will cover some useful shorthands in this section as well.
+
+## CSS Values
+
+Values can be keywords, lengths, colors, percentages, URLs, and more, depending on the property. You'll have to refer to the documentation for each property to see what values are accepted.
+
+But here is more information on values in general:
+
+### Keywords
+Keywords are predefined words that represent specific values for certain CSS properties. For example, the `display` property can take keywords like `block`, `inline`, `flex`, and `grid` to define how an element is displayed on the page.
+
+```css
+display: flex;
+```
+
+### Units
+
+Numerical values in CSS often require units to specify measurements. Common units include:
+- **Pixels (`px`)**: A fixed unit representing a specific number of pixels on the screen.
+    ```css
+    width: 200px;
+    ```
+- **Ems (`em`)**: A relative unit based on the font size of the parent element.
+    ```css
+    font-size: 1.5em; /* 1.5 times the font size of the parent element */
+    ```
+- **Rems (`rem`)**: A relative unit based on the font size of the root element (usually the `<html>` element).
+    ```css
+    font-size: 2rem; /* 2 times the font size of the root element */
+    ```
+- **Percentages (`%`)**: A relative unit based on the size of the parent element.
+    - A value of `100%` is commonly used to make an element take up the full width or height of its parent.
+    ```css
+    width: 50%; /* 50% of the parent element's width */
+    ```
+
+
+
+
+### Default Values
+Each CSS property has a default value that is applied if no specific value is set. You can override these defaults by explicitly setting the property in your CSS.
+
+Different types of elements have different default styles applied by the browser. For example, links (`<a>` elements) are typically blue and underlined by default. You can override these defaults using CSS properties:
+```css
+a {
+    /* color: blue; */ /* Default value for links is usually blue */
+    color: red; /* This will override the default and set the link color to red */
+    /* text-decoration: underline; */ /* Default value for links is usually underline */
+    text-decoration: none; /* This will override the default and remove the underline */
+}
+```
+When you set certain properties on an element, it can also set default values for related properties. 
+    
+For example, setting the `display` property to `flex` on a container element will also set default values for properties like `flex-direction` and `justify-content` on that container.
+```css
+.container {
+    display: flex; /* This sets the container to use Flexbox layout */
+    /* Default values applied by the browser */
+    /* flex-direction: row; */
+    /* justify-content: flex-start; */
+}
+```
 
 
 

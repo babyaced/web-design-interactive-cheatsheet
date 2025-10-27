@@ -1,0 +1,33 @@
+import { Callout } from 'nextra/components';
+import HTMLCSSJSPlayground from '../../../../../../components/HTMLCSSJSPlayground';
+
+# When should You Use CSS Flexbox?
+Flexbox is ideal for when you want the **content** to determine the layout and positioning of items within a container. Here's some scenarios where that might be what you want:
+
+- **Image Galleries**: Flexbox allows images of varying sizes to keep their natural dimensions while still being arranged neatly.
+
+<HTMLCSSJSPlayground folderPath="CSS/Layout/Flexbox/WhenToUseFlexbox/ImageGallery"/>
+
+- **Navigation Bars**: Flexbox is great for this since the size of links can vary based on their text content.
+
+<HTMLCSSJSPlayground folderPath="CSS/Layout/Flexbox/WhenToUseFlexbox/NavigationBar"/>
+
+- **Centering Content**: Flexbox makes it easy to center items both vertically and horizontally, regardless of their size.
+
+<HTMLCSSJSPlayground folderPath="CSS/Layout/Flexbox/WhenToUseFlexbox/CenteringContent"/>
+
+- **Simple One-Dimensional Layouts**: For example when you have a navbar, main content area, and footer that need to be arranged in a single row or column. Flexbox makes it easy to make sure your footer stays at the bottom of the page regardless of the content above it with the flex-grow property.
+
+<Callout type="info">
+Open this sandbox in a new tab to see how the footer stays at the bottom even with little content above it
+</Callout>
+
+<HTMLCSSJSPlayground folderPath="CSS/Layout/Flexbox/WhenToUseFlexbox/SimpleOneDimensionalLayout"/>
+
+- **Alignment of Small Components**: Flexbox is perfect for aligning small components like buttons, form elements, "tags", or icons within a container.
+
+<HTMLCSSJSPlayground folderPath="CSS/Layout/Flexbox/WhenToUseFlexbox/AligningSmallComponents"/>
+
+<Callout type="info">
+Remember that you can both use Flexbox and Grid together in the same project! Looking through the scenarios above, you might find that some parts of your layout are better suited to Flexbox while others are better suited to Grid.
+</Callout>

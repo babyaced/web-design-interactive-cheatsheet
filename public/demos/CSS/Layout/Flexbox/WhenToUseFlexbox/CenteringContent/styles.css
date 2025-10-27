@@ -1,0 +1,7 @@
+.flexbox-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    border: 2px solid #000;
+}

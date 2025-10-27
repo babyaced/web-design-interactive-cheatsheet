@@ -18,6 +18,8 @@ export default function SyncedSandpack(props: Props) {
   const current = theme === "system" ? resolvedTheme : theme
   const isDark = current === "dark"
 
+  console.log("props:", props)
+
   // Until mounted, render a deterministic theme (light) or a skeleton
   if (!mounted) return <Sandpack {...props} theme="light" />
 

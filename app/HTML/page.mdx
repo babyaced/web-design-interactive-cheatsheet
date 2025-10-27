@@ -5,7 +5,30 @@ HTML stands for HyperText Markup Language. It is the standard markup language us
 ## Basic Structure of an HTML Document
 An HTML document typically starts with a `<!DOCTYPE html>` declaration, followed by the `<html>` tag that encloses the entire document. Inside the `<html>` tag, there are two main sections: the `<head>` and the `<body>`.
 ### Head Section
-The `<head>` section contains meta-information about the document, such as the title, character set, and links to your stylesheets or javascript files.
+The `<head>` section contains meta-information about the document, such as the title, character set, and links to your stylesheets or javascript files. The most common elements found in the `<head>` section include:
+
+- **`<title>`**: Specifies the title of the webpage, which is displayed in the browser's title bar or tab.
+```html
+<title>My First HTML Page</title>
+```
+- **`<meta>`**: Provides metadata about the HTML document, such as character encoding and viewport settings.
+    - `<meta charset="UTF-8">`: Specifies the character encoding for the HTML document. This is essential for ensuring that the text displays correctly.
+    ```html
+    <meta charset="UTF-8"> 
+    ```
+    - `<meta name="viewport" content="width=device-width, initial-scale=1.0">`: Ensures that the webpage is responsive and displays correctly on different devices.
+    ```html
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    ```
+- **`<link>`**: Used to link external resources, such as stylesheets.
+    ```html
+    <link rel="stylesheet" href="styles.css">
+    ```
+- **`<script>`**: Used to include or reference JavaScript files that add interactivity to the webpage.
+    ```html
+    <script src="script.js"></script>
+    ```
+
 ### Body Section
 The `<body>` section contains the content of the webpage, which can include text, images, links, and other media. This is what users see and interact with in their web browsers.
 
@@ -15,6 +38,10 @@ The `<body>` section contains the content of the webpage, which can include text
 <html>
 <head>
     <title>My First HTML Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
 </head>
 <body>
     <h1>Welcome to My Website</h1>
@@ -25,3 +52,5 @@ The `<body>` section contains the content of the webpage, which can include text
 ```
 
 In this example, we have a simple HTML document with a title, a heading, a paragraph, and a link. Each element is defined by its respective tags, such as `<h1>` for the heading and `<p>` for the paragraph.
+
+That's the basics of HTML! With this foundation, you can start adding HTML elements to create your own web pages.

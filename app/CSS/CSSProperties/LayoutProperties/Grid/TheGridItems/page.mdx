@@ -1,3 +1,5 @@
+import HTMLCSSJSPlayground from '../../../../../../components/HTMLCSSJSPlayground';
+
 # The Grid items
 
 Grid items are the direct children of a grid container. They can be positioned and sized within the grid using various CSS properties.
@@ -8,10 +10,19 @@ Grid items are the direct children of a grid container. They can be positioned a
 
 You can control the start and end positions of a grid item within the grid by using the `grid-column-start`, `grid-column-end`, `grid-row-start`, and `grid-row-end` properties. These properties allow you to specify the grid lines where the item should start and end.
 
-### Positioning Grid Items in the Grid (`grid-column`, `grid-row`)
-
-You can control the position of a grid item within the grid by using the `grid-column` and `grid-row` properties. These properties allow you to specify the start and end lines for the item.
-
+- **grid-column-start**: Specifies the starting grid line for a grid item in the horizontal direction.
+- **grid-column-end**: Specifies the ending grid line for a grid item in the horizontal direction.
+- **grid-row-start**: Specifies the starting grid line for a grid item in the vertical direction.
+- **grid-row-end**: Specifies the ending grid line for a grid item in the vertical direction.
 
 #### Example
-<HTMLCSSJSPlayground folderPath={"CSS/Layout/Grid/GridItems"} />
+<HTMLCSSJSPlayground folderPath={"CSS/Layout/Grid/GridItems/RowColumnStartAndEnd"} activeFile={"styles.css"}/>
+
+You can also use the shorthand properties `grid-column` and `grid-row` to set both the start and end positions in a single declaration. 
+
+<HTMLCSSJSPlayground folderPath={"CSS/Layout/Grid/GridItems/RowColumnShorthand"} activeFile={"styles.css"}/>
+
+Isn't that much easier to read and write?
+
+
+

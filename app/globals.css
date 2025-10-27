@@ -1,0 +1,12 @@
+/* globals.css */
+:root {  /* light */
+    --nextra-primary-hue: 240 !important; 
+    --nextra-primary-saturation: 42% !important; 
+    --nextra-primary-lightness: 50% !important; 
+}           
+html.dark  {
+  :root { --nextra-primary-hue: 240 !important; --nextra-primary-saturation: 42% !important; --nextra-primary-lightness: 50% !important; }          /* dark */
+}
+
+
+

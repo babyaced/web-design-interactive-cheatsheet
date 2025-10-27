@@ -1,0 +1,38 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  text-align: center;
+}
+
+header,
+footer {
+  background: #333;
+  color: white;
+  padding: 1rem;
+}
+
+/* 🧱 Base grid layout */
+.container {
+  display: grid;
+  grid-template-columns: 1fr 2fr; /* Sidebar | Content */
+  min-height: 60vh;
+}
+
+/* Style for sections */
+.sidebar {
+  background: #ddd;
+  padding: 1rem;
+}
+
+.content {
+  background: #bbb;
+  padding: 1rem;
+}
+
+/* 📱 Media query: stack vertically on smaller screens */
+@media (max-width: 700px) {
+  .container {
+    grid-template-columns: 1fr; /* One column layout */
+    grid-template-rows: auto auto; /* Sidebar above content */
+  }
+}

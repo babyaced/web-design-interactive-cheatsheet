@@ -1,0 +1,10 @@
+.flexbox-container {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+
+img{
+    height: 150px;
+    flex: 1;
+}
