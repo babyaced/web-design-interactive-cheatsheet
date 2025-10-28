@@ -1,0 +1,10 @@
+.flex-container{
+    display: flex;
+    gap: 10px;
+}
+
+.flex-container p {
+    width: 100px;
+    text-align: center;
+    border: 2px solid black;
+}

@@ -1,0 +1,10 @@
+.flex-container {
+    display:flex;
+    gap: 10px;
+}
+
+.flex-item{
+    width: 100px;
+    text-align: center;
+    gap: 10px;
+}

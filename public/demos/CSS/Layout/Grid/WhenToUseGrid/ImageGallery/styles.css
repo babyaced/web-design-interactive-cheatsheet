@@ -1,0 +1,30 @@
+#grid {
+  display: grid;
+  gap: 10px;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: 1fr;
+}
+
+img {
+  object-fit: cover;
+  height: 400px;
+  width: 400px;
+  max-width: 100%;
+}
+
+#grid > div {
+  border: 2px solid black;
+}
+
+@media (min-width: 800px) {
+  #grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1200px) {
+  #grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}

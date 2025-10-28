@@ -1,0 +1,19 @@
+.margin {
+    border: 2px dashed black;        /* total width including box */
+    background-color: brown;
+;
+}
+
+.margin p {
+    padding-left: 40px;          /* space for margin label */
+}
+
+/* 🧱 One element with margin, border, and padding */
+.box {
+  background: green;        /* content area color (blue) */
+  color: darkblue;
+  border: 20px solid yellow;  /* border (dark blue) */
+  padding: 20px;              /* space inside border */
+  margin: 40px;          /* space outside border */
+  width: 200px;
+}

@@ -1,5 +1,6 @@
 import FlexContainerAxesRow from '../../../../../../assets/images/FlexContainerAxes-row.svg';
 import FlexContainerAxesColumn from '../../../../../../assets/images/FlexContainerAxes-column.svg';
+import HTMLCSSJSPlayground from '../../../../../../components/HTMLCSSJSPlayground';
 
 
 # What is a Flex Container?
@@ -7,8 +8,6 @@ A flex container is the element that holds all your flex items.
 
 ## How to Create a Flex Container
 To create a flex container, you need to set the `display` property of an element to `flex` or `inline-flex'.
-
-{/* <HTMLCSSJSPlayground folderPath={"CSS/Layout/Flexbox/FlexContainer"} /> */}
 
 ## The two axes of a Flex Container
 In a flex container, there are two axes that determine the layout of the flex items:
@@ -28,21 +27,23 @@ When the `flex-direction` of a flex container is set to `column`, the main axis 
 ### Defining the Direction of Flex Items (`flex-direction`)
 You can define the direction in which the flex items are laid out using the `flex-direction` property. The most common values used are:
 - `row` (default): Flex items are laid out in a row, from left to right.
+
+<HTMLCSSJSPlayground folderPath={"CSS/Layout/Flexbox/TheFlexContainer/FlexDirection/Row"} />
 - `column`: Flex items are laid out in a column, from top to bottom.
+<HTMLCSSJSPlayground folderPath={"CSS/Layout/Flexbox/TheFlexContainer/FlexDirection/Column"} />
 
 You can also layout the flex items in reverse order (from how they are written in the HTML) using:
 - `row-reverse`: Flex items are laid out in a row, from right to left.
 - `column-reverse`: Flex items are laid out in a column, from bottom to top.
-#### Example
-{/* <HTMLCSSJSPlayground folderPath={"CSS/Layout/Flexbox/FlexContainerFlexDirection"} /> */}
 
 ### Wrapping Flex Items (`flex-wrap`)
 By default, flex items will try to fit into one line. You can change this behavior using the `flex-wrap` property. The most common values used are:
 - `nowrap` (default): All flex items will be on one line.
+<HTMLCSSJSPlayground folderPath={"CSS/Layout/Flexbox/TheFlexContainer/NoWrap"} />
 - `wrap`: Flex items will wrap onto multiple lines, from top to bottom.
+<HTMLCSSJSPlayground folderPath={"CSS/Layout/Flexbox/TheFlexContainer/FlexWrap"} />
 - `wrap-reverse`: Flex items will wrap onto multiple lines, from bottom to top.
-#### Example
-{/* <HTMLCSSJSPlayground folderPath={"CSS/Layout/Flexbox/FlexContainerFlexWrap"} /> */}
+
 
 ### Aligning Flex Items Along the Main Axis (`justify-content`)
 You can align the flex items along the main axis (the direction defined by `flex-direction`) using the `justify-content` property. The most common values used are:
@@ -51,6 +52,8 @@ You can align the flex items along the main axis (the direction defined by `flex
 - `center`: Flex items are centered along the main axis.
 - `space-between`: Flex items are evenly distributed in the line; first item is on the start line, last item on the end line.
 - `space-around`: Flex items are evenly distributed in the line with equal space around them.
+
+<HTMLCSSJSPlayground folderPath={"CSS/Layout/Flexbox/TheFlexContainer/JustifyContent"} />
 #### Example
 {/* <HTMLCSSJSPlayground folderPath={"CSS/Layout/Flexbox/FlexContainerJustifyContent"} /> */}
 
