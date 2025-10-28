@@ -29,8 +29,3 @@ footer {
   padding: 2rem;
   border-radius: 8px;
 }
-
-/* Optional: subtle hover for fun */
-.box:hover {
-  background: #888;
-}

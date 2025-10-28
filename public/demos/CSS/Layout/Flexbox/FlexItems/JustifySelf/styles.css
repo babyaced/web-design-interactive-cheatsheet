@@ -1,0 +1,18 @@
+.flex-container {
+    display: flex;
+    width: 100%;
+}
+
+.align-center{
+    align-items: center;
+}
+
+.flex-item{
+    text-align: center;
+    border: 2px solid red;
+}
+
+.item-to-justify{
+    align-self: flex-start;
+}
+

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flex Wrap Example</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="base.css" />
+  </head>
+    <body>
+        <h4>align-self: auto</h4>
+        <div class="flex-container align-center">
+            <div class="flex-item" align-self: auto>Item 1</div>
+            <div class="flex-item">Item-2</div>
+            <div class="flex-item">Item 3</div>
+        </div>
+        <h4>align-self: flex-start</h4>
+        <div class="flex-container align-center">
+            <div class="flex-item align-self-flex-start">Item 1</div>
+            <div class="flex-item">Item-2</div>
+            <div class="flex-item">Item 3</div>
+        </div>
+        <h4>align-self: flex-end</h4>
+        <div class="flex-container align-center">
+            <div class="flex-item align-self-flex-end">Item 1</div>
+            <div class="flex-item">Item-2</div>
+            <div class="flex-item">Item 3</div>
+        </div>
+        <h4>align-self: center</h4>
+        <div class="flex-container align-flex-start">
+            <div class="flex-item align-self-center">Item 1</div>
+            <div class="flex-item">Item-2</div>
+            <div class="flex-item">Item 3</div>
+        </div>
+        <h4>align-self: stretch</h4>
+        <div class="flex-container align-center">
+            <div class="flex-item align-self-stretch">Item 1</div>
+            <div class="flex-item">Item-2</div>
+            <div class="flex-item">Item 3</div>
+        </div>
+    </body>
+</html>

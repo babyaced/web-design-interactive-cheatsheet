@@ -1,0 +1,28 @@
+.flex-container {
+    width: 100%;
+    display: flex;
+    border: 2px solid black;
+    margin-bottom: 20px;
+    height: 100px;
+}
+
+.align-items-stretch {
+    align-items: stretch;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.align-items-flex-start {
+    align-items: flex-start;
+}
+
+.align-items-flex-end {
+    align-items: flex-end;
+}
+
+.flex-item{
+    text-align: center;
+    border: 2px solid red;
+}
