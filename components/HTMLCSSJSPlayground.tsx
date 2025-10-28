@@ -41,7 +41,7 @@ export default function HtmlCssJsPlayground({ folderPath, includeJavascript = fa
   if (error) return <pre style={{ color: "crimson" }}>{error}</pre>
   if (!files) return <div>Loading…</div>
 
-  const visibleFiles = includeJavascript ? ["/index.html", "/styles.css", "/script.js"] : ["/index.html", "/styles.css", "/base.css"]
+  const visibleFiles = includeJavascript ? ["/index.html", "/styles.css", "/script.js"] : ["/index.html", "/styles.css"]
 
   return (
     <div style={{ margin: "2em 0" }}>
