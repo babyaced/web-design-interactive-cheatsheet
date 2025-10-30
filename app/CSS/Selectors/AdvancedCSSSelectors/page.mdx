@@ -14,11 +14,14 @@ The universal selector (`*`) selects all elements on the page.
 #### When to Use
 
 The universal selector should be used very rarely on it, its mainly used in CSS resets ([what are css resets?](https://en.wikipedia.org/wiki/Reset_style_sheet)) to remove margin and change the default `box-sizing` property of all elements to `border-box` (see this [video](https://www.youtube.com/watch?v=WlGQdgy-M6w) for why you might want this )
+
 *However* the universal selector can be useful when used in combination with other selectors (like in the example below)
 
 <HTMLCSSJSPlayground folderPath={"CSS/Selectors/AdvancedCSSSelectors/UniversalSelector"} activeFile='styles.css'/>
 
 The above selector will select all disabled elements (any HTML elements that have the disabled attribute) and apply the styles to them. The styles make the disabled elements look different from enabled elements by making them semi-transparent and changing the cursor to indicate that they are not interactive (The X symbol).
+
+This is useful for making any disabled elements have a consistent appearance across your webpage.
 
 ## Attribute Selector
 Attribute selectors allow you to select elements based on the presence or value of an attribute.

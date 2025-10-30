@@ -10,12 +10,16 @@ property: value;
 ```
 
 - **Property**: This is the name of the CSS property you want to modify (e.g., `color`, `font-size`, `margin`, etc.).
-    - Property names are always written in lowercase and use hyphens `-` to separate multiple words.
+    <Callout type="error">
+        Property names are always written in lowercase and use hyphens `-` to separate multiple words.
+    </Callout>
 - **Value**: This is the specific value you want to assign to the property (e.g., `red`, `16px`, `10px`, etc.).
 - **Semicolon (`;`)**: Each property-value pair ends with a semicolon to separate it from the next declaration in the block.
 
 ### Shorthands
-Some CSS properties have shorthand versions that allow you to set multiple related properties in a single declaration. For example, the `margin` property is a shorthand for setting the `margin-top`, `margin-right`, `margin-bottom`, and `margin-left` properties all at once.
+Some CSS properties have shorthand versions that allow you to set multiple related properties in a single declaration. 
+
+For example, the `margin` property is a shorthand for setting the `margin-top`, `margin-right`, `margin-bottom`, and `margin-left` properties all at once.
 So this:
 ```css
 margin-top: 10px;
@@ -59,10 +63,12 @@ Numerical values in CSS often require units to specify measurements. Common unit
     font-size: 2rem; /* 2 times the font size of the root element */
     ```
 - **Percentages (`%`)**: A relative unit based on the size of the parent element.
-    - A value of `100%` is commonly used to make an element take up the full width or height of its parent.
     ```css
     width: 50%; /* 50% of the parent element's width */
     ```
+    <Callout type="info">
+        A value of `100%` is commonly used to make an element take up the full width or height of its parent.
+    </Callout>
 
 
 
