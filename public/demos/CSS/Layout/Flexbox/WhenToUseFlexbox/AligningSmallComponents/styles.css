@@ -1,5 +1,13 @@
-.flexbox-container {
+.card {
     display: flex;
+    flex-direction: column;
     gap: 5px;
-    flex-wrap: wrap;
+    border: 2px solid blue;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.button-container {
+    display: flex;
+    gap: 10px;
 }

@@ -1,14 +1,21 @@
+import GridOverview from "../../../../../assets/vectors/GridOverview.svg";
+import {Callout} from 'nextra/components'
+
 # What is Grid?
 
 A grid layout is a powerful tool for creating complex and responsive web designs. It allows you to define rows and columns, making it easy to align and distribute content across a page.
 
+<GridOverview style={{margin: "2em"}}/>
 
+- **Grid Tracks**: These are the rows and columns that make up the grid. You can define the size of each track using properties like `grid-template-rows` and `grid-template-columns`.
+- **Grid Cells**: These are the individual spaces created by the intersection of rows and columns. Each cell can hold content, and you can control how content spans across multiple cells.
+- **Grid Gaps**: These are the spaces between rows and columns. You can set the size of the gaps using the `gap` property.
+- **Grid Areas**: These are sections of the grid that can be named and referenced when placing items. You can define grid areas using the `grid-template-areas` property.
+- **Grid Lines**: These are the lines that separate the rows and columns. You can reference grid lines when positioning items within the grid.
+    <Callout type="warning" title="Grid Lines">
+        When working with grid items, you position them using references to grid line numbers. This can be a bit confusing because the line numbers start at 1, not 0.
+        
+        So the first column/row is between lines 1 and 2, the second column/row is between lines 2 and 3, and so on. Keep this in mind when defining the placement of grid items!
+    </Callout>
 
-
-
-
-
-
-
-
-{/* <HTMLCSSJSPlayground folderPath={"CSS/Layout/Grid/GridContainer"} /> */}
+This whole layout pictured above is called the Grid Container. Let's learn a bit more about it.

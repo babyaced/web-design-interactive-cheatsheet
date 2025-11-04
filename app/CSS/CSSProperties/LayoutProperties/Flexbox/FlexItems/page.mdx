@@ -19,7 +19,7 @@ The `align-self` property allows you to align **individual** flex items along th
 - `center`: Centers the item along the cross axis.
 - `stretch`: Stretches the item to fill the container along the cross axis.
 
-<Callout type="default" title="Note">
+<Callout type="info" title="Note">
     For these examples I'll be using `align-items: center;` on the flex container to better demonstrate the effects of justify-self and align-self on individual flex items.
 
     (Except when demonstrating `align-self: center;` of course)
@@ -33,18 +33,50 @@ The `align-self` property allows you to align **individual** flex items along th
 The `flex-grow` property specifies how much a flex item should grow relative to the other flex items in the container when there is extra space available. 
 
 The default value is `0`, meaning the item will not grow. 
+
 A value of `1` means the item will grow to fill the available space.
 
+A value greater than `1` means the item will grow more than other items to that factor.
+
+Resize the example below to see how the third flex item behaves differently due to its `flex-grow` value of `1`:
+
+<HTMLCSSJSPlayground folderPath={"CSS/Layout/Flexbox/FlexItems/FlexGrow"} activeFile="styles.css"/>
+
+As you can see in the example above, the third flex item has a `flex-grow` value of `1`.
+
+When there is extra space in the flex container, the third item grows to fill that space, while the other two items remain their original size, only taking up the width of the **content** (the text inside them).
 
 
 #### The `flex-shrink` Property
 The `flex-shrink` property specifies how much a flex item should shrink relative to the other flex items in the container when there is not enough space available.
+
 The default value is `1`, meaning the item will shrink if necessary.
+
 A value of `0` means the item will not shrink.
+
+A value greater than `1` means the item will shrink more than other items to that factor.
+
+Resize the example below to see how the third flex item behaves differently due to its `flex-shrink` value of `0`:
+
+<HTMLCSSJSPlayground folderPath={"CSS/Layout/Flexbox/FlexItems/FlexShrink"} activeFile="styles.css"/>
+
+In the example above, the third flex item has a `flex-shrink` value of `0`.
+
+When there is not enough space in the flex container, the first and second items shrink to fit the available space, while the third item maintains its original size of `200px`.
 
 #### The `flex-basis` Property
 The `flex-basis` property specifies the initial size of a flex item before any growing or shrinking occurs. 
-It can be set to a specific length (e.g., `100px`, `20%`) or to `auto`, which means the item will size itself based on its content.
+It can be set to a specific length (e.g., `100px`, `20%`) or to `auto`
+
+`auto` is the default value. If the item has a fixed size (e.g., width or height), that size will be used as the basis. If not, the basis will be based on the content of the item.
+
+Resize the example below to see how the flex items are sized based on their `flex-basis` values:
+
+<HTMLCSSJSPlayground folderPath={"CSS/Layout/Flexbox/FlexItems/FlexBasis"} activeFile="styles.css"/>
+
+In the example above, the first flex item has a `flex-basis` of `50%`, meaning it will take up half of the flex container's width.
+
+The other two items have a `flex-basis` of `25%`, meaning they will each take up a quarter of the flex container's width.
 
  
 

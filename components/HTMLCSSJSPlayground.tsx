@@ -11,7 +11,7 @@ async function getText(filePath: string) {
   return res.text()
 }
 
-export default function HtmlCssJsPlayground({ folderPath, includeJavascript = false, activeFile = '/index.html' }: { folderPath: string, includeJavascript: boolean, activeFile: string }) {
+export default function HtmlCssJsPlayground({ folderPath, includeJavascript = false, activeFile = '/styles.css' }: { folderPath: string, includeJavascript: boolean, activeFile: string }) {
   const [files, setFiles] = useState<Record<string, { code: string }> | null>(null)
   const [error, setError] = useState<string | null>(null)
 

@@ -2,7 +2,13 @@ import { Callout } from 'nextra/components';
 import HTMLCSSJSPlayground from '../../../../../../components/HTMLCSSJSPlayground';
 
 # When should You Use CSS Flexbox?
-Flexbox is ideal for when you want the **content** to determine the layout and positioning of items within a container. Here's some scenarios where that might be what you want:
+Flexbox is ideal for when you want the **content** to determine the layout and positioning of items within a container. 
+
+In other words, you should choose it over Grid when you have a set of items with varying sizes and you want those items to create their own structure.
+
+As stated earlier, it is a 1-dimensional layout system. So it can be useful when you want to create simpler layouts that only require a single row or a single column. That doesn't mean you can't create more complex layouts with rows and columns, but you won't have the same level of control over both rows and columns as you would with Grid.
+
+Here's some scenarios where that might be what you want:
 
 - **Image Galleries**: Flexbox allows images of varying sizes to keep their natural dimensions while still being arranged neatly.
 
@@ -11,6 +17,8 @@ Flexbox is ideal for when you want the **content** to determine the layout and p
 - **Navigation Bars**: Flexbox is great for this since the size of links can vary based on their text content.
 
 <HTMLCSSJSPlayground folderPath="CSS/Layout/Flexbox/WhenToUseFlexbox/NavigationBar"/>
+
+In the example above, I'm actually using two flex containers: one for the entire navbar to space out the logo and the links, and another for the links themselves to space them out evenly.
 
 - **Centering Content**: Flexbox makes it easy to center items both vertically and horizontally, regardless of their size.
 

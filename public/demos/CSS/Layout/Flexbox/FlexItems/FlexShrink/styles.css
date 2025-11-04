@@ -1,0 +1,13 @@
+.flex-container{
+    display: flex;
+}
+
+.flex-container > div{
+    border: 2px solid green;
+    text-align: center;
+}
+
+#flex-item-3{
+    width: 200px;
+    flex-shrink: 0;
+}

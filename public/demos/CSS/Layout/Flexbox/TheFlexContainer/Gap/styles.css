@@ -1,9 +1,12 @@
 .flex-container {
     display:flex;
+    flex-wrap: wrap;
+    row-gap: 10px;
+    column-gap: 20px;
 }
+
 
 .flex-item{
     width: 100px;
     text-align: center;
-    gap: 10px;
 }
