@@ -1,4 +1,6 @@
 import HTMLCSSJSPlayground from '../../../../../../components/HTMLCSSJSPlayground';
+import { Callout } from 'nextra/components'
+import Link from 'next/link';
 
 # The Grid Container
 The grid container is the element in which all your grid items live. To create a grid container, you need to set the `display` property of an element to `grid`. 
@@ -36,6 +38,30 @@ The grid-template-columns property in the example above could also be written li
 ```css
 grid-template-columns: 25% 50% 25%;
 ```
+
+### Defining columns and rows using content name (`grid-template-areas`)
+
+You can also define the structure of your grid using named areas with the `grid-template-areas` property. 
+
+This allows you to create a more descriptive layout by assigning names to different sections of your grid.
+
+`grid-template-areas` expects string values with each string representing a row in the grid. 
+
+Within each string, you can use names to define areas, and use a period (`.`) to represent empty cells.
+
+To create a new row , simply add another string. After all rows are defined, you end the value with a semicolon just like any other CSS property.
+
+<Callout type="warning">
+    `grid-template-areas` does not define the size of the columns or rows. You still need to use `grid-template-columns` and `grid-template-rows` to set the sizes!
+</Callout>
+
+On each item you use the `grid-area` property (<Link href="/CSS/CSSProperties/LayoutProperties/Grid/TheGridItems#grid-area-grid-area" style={{color: "var(--x-color-primary-600)", textDecorationLine: "underline"}}>read more about `grid-area` on the next page</Link>) to assign it to one of the named areas defined in the `grid-template-areas` property.
+
+<Callout type="warning">
+    When using the `grid-area` property on a grid item, make sure that the value is not wrapped in quotes!
+</Callout>
+
+<HTMLCSSJSPlayground folderPath={"CSS/Layout/Grid/WhenToUseGrid/TwoDimensionalPageLayout"} />
 
 ### Setting Gaps Between Rows and Columns (`gap`, `row-gap`, `column-gap`)
 You can set gaps between rows and columns in your grid using the `gap`, `row-gap`, and `column-gap` properties.
