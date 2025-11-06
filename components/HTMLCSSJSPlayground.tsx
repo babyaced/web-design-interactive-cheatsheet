@@ -18,16 +18,18 @@ export default function HtmlCssJsPlayground({ folderPath, includeJavascript = fa
   useEffect(() => {
     ;(async () => {
       try {
-        const [html, css, js, baseCss] = await Promise.all([
-          getText(`/demos/${folderPath}/index.html`),
+        const [html, indexJS, css, baseCss] = await Promise.all([
+          getText(`/demos/${folderPath}/markup.html`),
+          getText(`/demos/${folderPath}/index.js`),
           getText(`/demos/${folderPath}/styles.css`),
-          includeJavascript ? getText(`/demos/${folderPath}/script.js`) : Promise.resolve(""),
+          // includeJavascript ? getText(`/demos/${folderPath}/script.js`) : Promise.resolve(""),
           getText(`/demos/${folderPath}/base.css`),
         ])
         setFiles({
-          "/index.html": { code: html },
+          "/markup.html": {code: html},
+          "/index.js": { code: indexJS },
           "/styles.css": { code: css },
-          "/script.js": { code: js },
+          // "/script.js": { code: js },
           "/base.css": { code: baseCss },
         })
       } catch (e: any) {
@@ -41,14 +43,14 @@ export default function HtmlCssJsPlayground({ folderPath, includeJavascript = fa
   if (error) return <pre style={{ color: "crimson" }}>{error}</pre>
   if (!files) return <div>Loading…</div>
 
-  const visibleFiles = includeJavascript ? ["/index.html", "/styles.css", "/script.js"] : ["/index.html", "/styles.css"]
+  const visibleFiles = includeJavascript ? ["/markup.html", "/styles.css"] : ["/markup.html", "/styles.css"]
 
   return (
     <div style={{ margin: "2em 0" }}>
     <SyncedSandpack
-      template={"static"}
+      template={"vanilla"}
       files={files} // ⬅️ disables Sandpack’s default JS file
-      options={{ showTabs: true, editorHeight: 380, resizablePanels: true, visibleFiles: visibleFiles, activeFile: activeFile }}
+      options={{ showTabs: true, editorHeight: 380, resizablePanels: true, visibleFiles:visibleFiles }}
     />
     </div>
   )
