@@ -1,0 +1,105 @@
+# Functions
+
+## What are functions?
+
+Functions are reusable blocks of code that perform a specific task. They help you organize your code, make it more readable, and avoid repetition.
+
+## Defining a function
+
+You can define a function using the `def` keyword, followed by the name you want to give the function and parentheses. 
+
+Here's an example of a simple function that greets a user:
+
+```python
+def greet():
+    print("Hello, welcome to Python!")
+```
+
+In this example, we defined a function named `greet` that prints a welcome message when called.
+
+## Using a function (Calling a function)
+
+Calling a function is done by using its name followed by parentheses:
+
+```python
+greet()  # Output: Hello, welcome to Python!
+```
+
+When you call a function the code inside the function is <u>executed</u>.
+
+So in this example, calling `greet()` will print `Hello, welcome to Python!` to the console.
+
+## Function Parameters
+
+Functions can also take inputs, called <u>parameters</u>, which allow you to pass data into the function. 
+
+Here's an example of a function that takes a parameter:
+
+```python
+def greet_user(name):
+    print(f"Hello, {name}! Welcome to Python!")
+```
+
+You can probably see how this would be useful! The `greet_user` function takes a parameter `name` and uses it to personalize the greeting message.
+
+To call this function and pass a name, you would do it like this:
+
+```python
+greet_user("Alice")  # Output: Hello, Alice! Welcome to Python!
+```
+
+In this example, when we call `greet_user("Alice")`, it prints a personalized greeting for Alice: `Hello, Alice! Welcome to Python!`.
+
+## Return Values
+
+Functions can also return values using the `return` statement. 
+
+When you return a value from a function, that means the function will give back a result that you can use later in your code.
+
+To demonstrate this, here's an example of a function that adds two numbers and *returns* the result:
+
+```python
+def add_numbers(a, b):
+    return a + b
+```
+
+You can call this function and store the returned value in a variable like this:
+
+```python
+result = add_numbers(3, 5)
+print(result)  # Output: 8
+```
+
+In this example, the `add_numbers` function takes two parameters, `a` and `b`, adds them together, and returns the result. 
+
+When we call `add_numbers(3, 5)`, it returns the result of `5+3` which is `8`. This value is then stored in the variable `result`. 
+
+On the next line we print the value of `result`, which is 8.
+
+You may be wondering why we would want to return a value instead of just printing it inside the function.
+
+This is a valid question! Returning values from functions is most useful when you want to use the result of a function in other parts of your code, or when you want to perform further calculations with that result.
+
+For example if you wanted to add two numbers and then multiply the result by another number, you could do it like this:
+
+```python
+sum_result = add_numbers(3, 5)  # sum_result will be 8
+final_result = sum_result * 2    # final_result will be 16
+print(final_result)               # Output: 16
+```
+
+Doing it this way also allows you to keep the addition and multiplication functionality separate, making your code more <u>modular</u> and easier to read.
+
+Modularity is an important concept in programming that helps you break down complex problems into smaller, manageable pieces.
+
+Its good practice to write functions that perform a single task and return results, as this makes your code more reusable. 
+
+You'll learn the value of this as you progress in your programming journey!
+
+
+
+
+
+
+
+

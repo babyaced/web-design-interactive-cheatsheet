@@ -1,0 +1,119 @@
+import {Callout} from 'nextra/components'
+
+# Lists
+
+Lists are ordered collections of items. Lists are a type of data type in Python referred to as a data structure.
+
+Items in a list can be of any data type, including numbers, strings, and even other lists.
+
+## Creating a List
+
+You can create a list by placing items inside square brackets `[]`, separated by commas.
+
+```python
+# Creating a list of integers
+numbers = [1, 2, 3, 4, 5]
+# Creating a list of strings
+fruits = ["apple", "banana", "cherry"]
+# Creating a mixed list
+mixed = [1, "apple", 3.14, True]
+```
+
+In the example above, you may have noticed that lists can contain items of different data types. 
+Usually lists contain items of the same data type, but Python allows for mixed data types as well.
+
+## Accessing List Items
+
+You may be wondering how to access items in a list. You can do this by using the index of the item you want to access.
+
+Be aware that the first item in a list has an index of `0`, the second item has an index of `1`, and so on.
+
+To access an item in a list, you can use square brackets `[]` with the index of the item you want to access inside the brackets.
+
+```python
+fruits = ["apple", "banana", "cherry"]
+print(fruits[0])  # Output: apple
+print(fruits[1])  # Output: banana
+print(fruits[2])  # Output: cherry
+```
+
+You can also use negative indexing to access items from the end of the list. The last item has an index of `-1`, the second last item has an index of `-2`, and so on.
+
+```python
+fruits = ["apple", "banana", "cherry"]
+print(fruits[-1])  # Output: cherry
+print(fruits[-2])  # Output: banana
+print(fruits[-3])  # Output: apple
+```
+## Modifying List Items
+
+You can modify items in a list by accessing them using their index and assigning a new value like you would with a variable.
+
+```python
+fruits = ["apple", "banana", "cherry"]
+fruits[1] = "blueberry"  # Changing "banana" to "blue
+print(fruits)  # Output: ['apple', 'blueberry', 'cherry']
+```
+
+## List Methods
+
+Lists come with several built-in methods that allow you to manipulate and work with them easily. Here are some commonly used list methods:
+
+- `append()`: Adds an item to the end of the list.
+  
+  ```python
+  fruits = ["apple", "banana"]
+  fruits.append("cherry")
+  print(fruits)  # Output: ['apple', 'banana', 'cherry']
+  ```
+
+- `remove()`: Removes the first occurrence of a specified item from the list.
+  
+  ```python
+    fruits = ["apple", "banana", "cherry"]
+    fruits.remove("banana")
+    print(fruits)  # Output: ['apple', 'cherry']
+    ```
+- `pop()`: Removes and returns the item at the specified index. If no index is specified, it removes and returns the last item.
+    ```python
+    fruits = ["apple", "banana", "cherry"]
+    last_fruit = fruits.pop()
+    print(last_fruit)  # Output: cherry
+    print(fruits)      # Output: ['apple', 'banana']
+    ```
+
+- `insert()`: Inserts an item at a specified index.
+    ```python
+    fruits = ["apple", "banana"]
+    fruits.insert(1, "cherry")  # Inserting "cherry" at index 1
+    print(fruits)  # Output: ['apple', 'cherry', 'banana']
+    ```
+<Callout type="info" title="Note about insert()">
+Notice how the `insert()` method shifts the item currently at that position (if any) and any subsequent items to the right.
+</Callout>
+
+- `sort()`: Sorts the items in the list in ascending order.
+    ```python
+    numbers = [3, 1, 4, 2]
+    numbers.sort()
+    print(numbers)  # Output: [1, 2, 3, 4]
+    ```
+
+You can sort by descending order by passing the <u>argument</u> `reverse=True` to the `sort()` method.
+
+```python
+numbers = [3, 1, 4, 2]
+numbers.sort(reverse=True)
+print(numbers)  # Output: [4, 3, 2, 1]
+```
+
+- `len()`: Returns the number of items in the list.
+    ```python
+    fruits = ["apple", "banana", "cherry"]
+    print(len(fruits))  # Output: 3
+    ```
+
+These are just a few of the many methods available for lists in Python. You can explore more methods in the [official Python documentation](https://docs.python.org/3/tutorial/datastructures.html#more-on-lists).
+
+
+
