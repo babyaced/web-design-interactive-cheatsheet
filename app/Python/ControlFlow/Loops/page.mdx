@@ -1,0 +1,74 @@
+# loops
+
+In the previous lesson, we learned about conditional statements using `if`, `elif`, and `else` to control whether certain blocks of code run at all.
+
+Another aspect of control flow is controlling *how many times* a block of code runs. This is where **loops** come in!
+
+## What are loops?
+
+Loops are used to repeat a block of code multiple times until a certain condition is met.
+
+There are two main types of loops in Python: `while` loops and `for` loops.
+
+## While loops
+
+A `while` loop repeats a block of code as long as a certain condition is true.
+
+Here's an example of a `while` loop that prints numbers from 1 to 5:
+
+```python
+number_of_iterations = 1
+while number_of_iterations <= 5:
+    print(number_of_iterations)
+    number_of_iterations += 1  # Increment number_of_iterations by 1
+```
+
+In this example, the loop continues to run as long as `number_of_iterations` is less than or equal to 5. Inside the loop, we print the value of `i` and then increment `i` by 1.
+
+<Callout type="note" title="Vocab - Iteration">
+    In programming, each time a loop runs through its block of code is called an **iteration**.
+</Callout>
+
+When you run this code, it will output:
+
+```
+1
+2
+3
+4
+5
+```
+
+## For loops
+
+A `for` loop lets you repeat a block of code for each item in a sequence (like a list or a range of numbers).
+
+Here's an example of a `for` loop that prints the numbers from 1 to 5:
+
+```python
+for number_of_iterations in range(1, 6):
+    print(number_of_iterations) # Code you want to repeat
+```
+
+The range() function generates a sequence of numbers from 1 to 5 and the loop **iterates** over each number, assigning it to the variable `i` and executing the indented block of code (printing `i`) for each number.
+
+When you run this code, it will output:
+
+```
+1
+2
+3
+4
+5
+```
+
+Notice how we got the same output as the `while` loop example, but we never needed to manually increment `number_of_iterations` or check the condition ourselves. The `for` loop handles that for us!
+
+In other programming languages, `for` loops often use a different **syntax** that demonstrates this more clearly, but in Python, the `for` loop is designed to be simple and easy to read.
+
+
+
+
+
+
+

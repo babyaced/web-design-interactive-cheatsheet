@@ -1,0 +1,145 @@
+import { Callout } from 'nextra/components';
+
+# Classes and Objects
+Objects are a fundamental data structure in Python and programming in general. 
+An object is a collection of related data and functionality.
+In Python, everything is an object, including numbers, strings, lists, and even functions.
+
+<Callout type="info" heading="A Note on Terminology">
+In Python and other programming languages, when you refer to a function that is part of a class, it is called a <u>method</u>.
+</Callout>
+
+## Creating Objects
+You can create an object in Python using the `class` keyword.
+Here's an example of a simple class that represents a `Dog`:
+
+```python
+class Dog:
+    species = "Canis familiaris"
+    number_of_legs = 4
+```
+You have now defined a class named `Dog` with two **class variables**: `species` and `number_of_legs`.
+Now you can use the class `Dog` to create an object (also called an instance) of that class.
+In simpler terms, you can create a new dog with the properties defined in the class:
+
+```python
+my_dog = Dog()
+```
+
+The my_dog variable now represents a specific dog object with the species "Canis familiaris" and number of legs 4.
+
+What if you wanted to create multiple dogs with different names and ages though?
+For that, we will have to learn about constructors and instance variables, which we will cover in the next section!
+
+### Object methods
+
+You can also define functions (methods) inside a class to represent behaviors of the object.
+**Methods** are defined just like regular functions, but they are indented inside the class definition.
+
+Here's an example of adding a method to the `Dog` class:
+
+```python
+class Dog:
+    species = "Canis familiaris"
+    number_of_legs = 4
+
+    def bark():
+        print("Woof!")
+```
+
+We added a `bark` method to the `Dog` class that returns the string "Woof!" when called.
+
+We'll learn how to call methods later, but for now, just know that you can define behaviors for your objects using methods.
+
+## Constructors
+
+Notice that the dog properties I defined in the previous section ,`species` and `number_of_legs`, are the same for all dogs.
+I specifically chose those properties because they are common to all dogs.
+They make good candidates to be **class variables** because **class variables** are shared across all instances of a class.
+
+No matter how many dogs you create, they will all have the same `species` and `number_of_legs`. Makes sense right?
+
+To create properties that are unique to each object we use **instance variables**.
+
+For a dog, properties we might use **instance variables** for could be its `name` and `age`.
+
+To set up these unique properties, we use something called a **constructor**.
+
+A **constructor** is a special function that is called when an object is created from a class.
+
+We often use a constructor to initialize the unique properties of an object.
+
+In Python, we have to define the constructor function using the `__init__` method.
+
+Here's an example of how to use a constructor to create a `Dog` class with unique `name` and `age` properties:
+
+```python
+class Dog:
+    species = "Canis familiaris"
+    number_of_legs = 4
+
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+```
+
+
+In this example, we defined a constructor using the `__init__` method that takes two parameters: `name` and `age`.
+
+The `self` parameter is a reference to the current **instance** of the class and is used to access variables that belong to the class.
+
+Now we can create multiple dog objects with different names and ages:
+
+```python
+dog1 = Dog("Buddy", 3)
+dog2 = Dog("Max", 5)
+```
+
+To use the constructor, we simply write the class name followed by parentheses, passing in the required **arguments**.
+
+In this case, we created two dog objects: `dog1` with the name "Buddy" and age 3, and `dog2` with the name "Max" and age 5.
+Each dog object has its own unique `name` and `age` **instance variables**, while still sharing the same `species` and `number_of_legs` **class variables**.
+
+## Accessing Object properties
+
+Now that we have created our dog objects, we can access their properties using the **dot notation**.
+
+**Dot notation** is a way to access the properties and methods of an object using a dot (`.`) followed by the property or method name.
+
+Here's how we can access the properties of our dog objects:
+
+```python
+print(dog1.name)  # Output: Buddy
+print(dog1.age)   # Output: 3
+print(dog2.name)  # Output: Max
+print(dog2.age)   # Output: 5
+```
+
+We can also use the `bark` method we defined earlier in this same way with **dot notation**:
+
+```python
+dog1.bark()  # Output: Woof!
+dog2.bark()  # Output: Woof!
+```
+
+Notice that when we call the `bark` method, we use parentheses `()` after the method name to indicate that we are calling a function.
+
+That's it for our introduction to classes and objects in Python!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

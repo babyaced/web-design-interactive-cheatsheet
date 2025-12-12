@@ -1,0 +1,118 @@
+# What is Control Flow?
+
+Control flow is the order in which individual statements, instructions, or function calls are executed or evaluated in a programming language.
+This is an important concept because it allows us to control how our programs behave based on different conditions and inputs.
+
+For example, for a movie recommendation program, we might want to suggest different movies based on the user's age.
+
+**If** the user is under 13 years old, we would recommend family-friendly movies.
+**If** the user is 13 years or older, we could recommend a wider range of movies, including those with more mature themes.
+
+To implement something like this in Python, we can actually use that same word "if"
+
+```python
+age = 15
+
+if age < 13:
+    //recommend family-friendly movies
+if age >= 13:
+    //recommend a wider range of movies
+```
+
+In this example, the program checks the value of the `age` variable and executes different blocks of code based on the conditions specified in the `if` statements.
+
+Because the age is 15, the program would skip the first block and execute the second block to recommend a wider range of movies.
+
+This is a simple example, but we can actually make it simpler using another control flow statement called `else`.
+
+## If-Else statements
+
+An `if-else` statement allows us to specify an alternative block of code to execute when the condition in the `if` statement is not met.
+This means we don't have to write if statements for every possible condition if we don't need to.
+
+In this movie recommendation example, we don't really need to check if the age is 13 or older, because if the first condition is false aka the user is not under 13, we already know the user must be 13 or older right?
+
+So we can simplify our code like this:
+
+```python
+age = 15
+if age < 13:
+    //recommend family-friendly movies
+else:
+    //recommend a wider range of movies
+```
+
+In this example, if the user is under 13, the program will recommend family-friendly movies.
+**Else**, it will recommend a wider range of movies.
+
+If you had more than two conditions to check, say you wanted to recommend different movies for users under 13, users between 13 and 17, and users 18 and older, you could use `elif` statements.
+
+```python
+age = 15
+if age < 13:
+    //recommend family-friendly movies
+elif age >= 13 and age < 18:
+    //recommend teen movies
+else:
+    //recommend adult movies
+```
+
+In this example, the program checks the age and recommends different types of movies based on the specified age ranges.
+The `elif` statement stands for "else if", meaning it only gets checked if the previous `if` condition was false.
+
+Be careful not to use `if` and `elif` statements interchangably. 
+An `if` statement always checks its condition, regardless of whether previous conditions were true or false.
+An `elif` statement only checks its condition if all previous `if` and `elif` conditions were false.
+
+Consider this new example:
+
+```python
+student_has_perfect_attendance = True
+student_on_honor_roll = True
+
+if student_has_perfect_attendance:
+    print("Congrats on perfect attendance!")
+elif student_on_honor_roll:
+    print("Congrats on making the honor roll!")
+
+# Output:
+# Congrats on perfect attendance!
+# (Honor roll message is skipped because elif only runs if the first condition was False.)
+```
+
+In this example, even though the student is also on the honor roll, the program only prints the message for perfect attendance because the `elif` condition is not checked since the first `if` condition was true.
+
+To correct this we'd want to use two separate `if` statements instead:
+
+```python
+student_has_perfect_attendance = True
+student_on_honor_roll = True
+
+if student_has_perfect_attendance:
+    print("Congrats on perfect attendance!")
+if student_on_honor_roll:
+    print("Congrats on making the honor roll!")
+
+# Output:
+# Congrats on perfect attendance!
+# Congrats on making the honor roll!
+```
+
+Now the first if statement checks for perfect attendance and the second if statement checks for honor roll status independently, allowing both messages to be printed.
+
+## Summary
+
+We learned that control flow allows us to control the order in which our code executes based on conditions.
+We covered `if`, `elif`, and `else` statements to create conditional logic in our programs.
+
+In the next lesson, we'll explore more advanced control flow concepts like loops, which allow us to control how many times a block of code runs!
+
+
+
+
+
+
+
+
+
+
