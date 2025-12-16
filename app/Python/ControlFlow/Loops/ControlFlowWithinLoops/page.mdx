@@ -1,0 +1,100 @@
+# Control Flow Within Loops
+
+Just like we can use control flow statements like `if`, `else`, and `elif` to control the flow of our programs, we can also use them *within* loops to add more complex logic to our iterations.
+
+## sing if statements within loops
+You can use `if` statements inside loops to conditionally execute code during each iteration.
+Here's an example of a `for` loop that prints only the even numbers from 1 to 10:
+
+```python
+for number in range(1, 11):
+    if number % 2 == 0:  # Check if the number is even
+        print(number)
+```
+
+In this example, the loop iterates through numbers 1 to 10. Inside the loop, we use an `if` statement to check if the number is even (i.e., divisible by 2 with no remainder). If the condition is true, it prints the number.
+
+When you run this code, it will output:
+
+```
+2
+4
+6
+8
+10
+```
+
+In general, you can do anything inside a loop that you can do outside of a loop, including using control flow statements like `if`, `elif`, and `else`.
+
+However, there are also some special control flow statements that are specifically designed to work within loops: `break` and `continue`. We'll cover those next!
+
+## The break statement
+
+The `break` statement is used to exit a loop prematurely or early, stopping all further iterations.
+We typically use `break` when we want to stop the loop based on a certain condition being met, that no longer requires further iterations.
+
+Here's an example of using `break` in a `while` loop:
+
+```python
+number_we_are_looking_for = 7
+current_number = 1
+while current_number <= 10:
+    if current_number == number_we_are_looking_for:
+        print("Found the number: {current_number}")
+        break  # Exit the loop when we find the number, we don't need to keep looking!
+    print("Checking number: {current_number}")
+    current_number += 1 # Increment current_number by 1
+```
+
+In this example, the loop iterates through numbers 1 to 10. When it finds the number we are looking for (7), it prints a message and then uses `break` to exit the loop immediately because we no longer need to continue searching.
+
+When you run this code, it will output:
+
+```
+Checking number: 1
+Checking number: 2
+Checking number: 3
+Checking number: 4
+Checking number: 5
+Checking number: 6
+Found the number: 7
+```
+
+This was a very simple example, but `break` can be very useful in more complex loops where you want to stop iterating based on certain conditions.
+
+## The continue statement
+
+The `continue` statement is used to skip the current iteration of a loop and move on to the next iteration.
+We typically use `continue` when we want to skip over certain items in a loop based on a condition, but still want to keep iterating through the rest of the items.
+
+Here's an example of using `continue` in a `for` loop:
+
+```python
+for number in range(1, 11):
+    if number % 2 != 0:  # Check if the number is odd
+        continue  # Skip odd numbers
+    print(number)  # This will only print even numbers
+```
+
+In this example, the loop iterates through numbers 1 to 10. When it encounters an odd number, it uses `continue` to skip the rest of the loop body for that iteration and move on to the next number. As a result, only even numbers are printed.
+
+When you run this code, it will output:
+
+```
+2
+4
+6
+8
+10
+```
+
+Continue is basically a way to say "skip this one and go to the next" within a loop.
+
+## Summary
+
+That's it for control flow within loops! Try using `if`, `else`, `elif`, `break`, and `continue` to create more complex and dynamic loops in your Python programs.
+
+
+
+
+

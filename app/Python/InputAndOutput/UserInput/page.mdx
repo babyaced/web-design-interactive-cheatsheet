@@ -1,0 +1,37 @@
+# User Input
+
+User Input is a way for a program to receive data from the user while the program is running.
+In Python, we can use the **built-in** `input()` function to get input from the user.
+
+To use the `input()` function, we simply call it and optionally pass a string as a prompt to display to the user.
+
+Let's ask the user for their name and then greet them:
+
+```python
+name = input("What is your name? ")
+print("Hello, " + name + "!")
+```
+
+Here's how this code works:
+1. We call the `input()` function with the prompt `"What is your name? "
+2. The program waits for the user to type their name and press Enter.
+3. The user's input is then stored in the variable `name` as the input function always returns the entered string.
+4. Finally, we print a greeting message that includes the user's name.
+
+You can use the `input()` function to get different types of input from the user as well by using type conversion.
+
+For example, if you want to get a number from the user, you can convert the input string to an integer using the `int()` function:
+
+```python
+ageString = (input("How old are you? ")) # use the input function to get user input and store in ageString variable
+age = int(ageString) # convert our ageString variable that is string type to integer type
+print("You are " + str(age) + " years old.") # print the message to the user - converting age back to string for concatenation
+```
+
+
+
+
+
+
+
+

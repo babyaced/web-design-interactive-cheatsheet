@@ -1,0 +1,169 @@
+# Dictionaries
+
+You may be thinking, isn't a dictionary just a list of words and their meanings?
+Yes, in real life it is! But in Python, a dictionary is a special data structure that allows you to store data in **key-value pairs**.
+
+**Key-value pairs** means that each item in the dictionary has a unique **key** that is used to access its corresponding **value**.
+
+In fact when you think about it, a real-life dictionary is also made up of key-value pairs, where the **key** is the word and the **value** is its meaning.
+
+We use dictionaries in Python when we want to store and organize data that is related to each other in some way.
+
+Dictionaries are very useful because they allow us to quickly look up values based on their keys, making data retrieval efficient and straightforward.
+
+Let's see how we can create and use dictionaries in Python.
+
+## Creating a dictionary
+
+You can create a dictionary by placing key-value pairs inside curly braces `{}`, separated by commas. Each key is separated from its value by a colon `:`.
+
+Let's create a simple dictionary that represents a person:
+
+```python
+person = {
+    "name": "Alice",
+    "age": 30,
+    "city": "New York",
+    "hair_color": "brown"
+}
+
+print(person)  # Output: {'name': 'Alice', 'age': 30, 'city': 'New York', 'hair_color': 'brown'}
+```
+
+In this example, we created a dictionary named `person` with three key-value pairs:
+- The key `"name"` has the value `"Alice"`
+- The key `"age"` has the value `30`
+- The key `"city"` has the value `"New York"`
+
+Remember that keys must be unique within a dictionary.
+
+If we tried to create another key `"name"` in the same dictionary, it would overwrite the previous value.
+
+```python
+person = {
+    "name": "Alice",
+    "age": 30,
+    "city": "New York",
+    "hair_color": "brown",
+    "name": "Aly"  # This will overwrite the previous "name" key
+}
+
+print(person)  # Output: {'name': 'Aly', 'age': 30, 'city': 'New York', 'hair_color': 'brown'}
+```
+
+As you can see, the value for the key `"name"` is now `"Aly"` because it overwrote the previous value.
+
+Values, on the other hand, can be of any data type and can be duplicated.
+
+if we had another key `eye_color` with the value `"brown"`, that would be perfectly fine.
+
+```python
+person = {
+    "name": "Alice",
+    "age": 30,
+    "city": "New York",
+    "hair_color": "brown",
+    "eye_color": "brown"  # This is perfectly fine
+}
+print(person)  # Output: {'name': 'Alice', 'age': 30, 'city': 'New York', 'hair_color': 'brown', 'eye_color': 'brown'}
+```
+
+## Accessing dictionary values
+
+You can access the value associated with a specific key in a dictionary by using square brackets `[]` with the key inside the brackets.
+
+let's say we want to access the `age` of the person in our `person` dictionary:
+
+```python
+person = {
+    "name": "Alice",
+    "age": 30,
+    "city": "New York",
+    "hair_color": "brown"
+}
+print(person["age"])  # Output: 30
+```
+
+In this example, we accessed the value associated with the key `"age"` in the `person` dictionary, which is `30`.
+
+You can also use the `get()` method to access dictionary values. This method is useful because it allows you to provide a default value if the key does not exist in the dictionary.
+
+```python
+person = {
+    "name": "Alice",
+    "age": 30,
+    "city": "New York",
+    "hair_color": "brown"
+}
+print(person.get("age"))          # Output: 30
+print(person.get("occupation", "Not specified"))  # Output: Not specified
+```
+
+In this example, we used the `get()` method instead of square brackets `[]` to access the value associated with the key `"age"`, which is `30`.
+Then we tried to access the value for the key `"occupation"`, which does not exist in the dictionary.
+Since we provided a default value of `"Not specified"`, that is what was returned.
+
+## Modifying dictionary values
+
+You can also modify the value associated with a specific key in a dictionary by using square brackets `[]` with the key inside the brackets and assigning a new value.
+
+It's Alice's birthday and she just turned 31! Let's update her age in the `person` dictionary:
+```python
+person = {
+    "name": "Alice",
+    "age": 30,
+    "city": "New York",
+    "hair_color": "brown"
+}
+
+person["age"] = 31  # Updating Alice's age
+print(person)  # Output: {'name': 'Alice', 'age': 31, 'city': 'New York', 'hair_color': 'brown'}
+```
+
+In this example, we updated the value associated with the key `"age"` from `30` to `31`.
+
+## Adding new key-value pairs
+
+You can add new key-value pairs to a dictionary by using square brackets `[]` with the new key inside the brackets and assigning a value.
+Let's say we want to add Alice's occupation to the `person` dictionary:
+
+```python
+person = {
+    "name": "Alice",
+    "age": 31,
+    "city": "New York",
+    "hair_color": "brown"
+}
+person["occupation"] = "Engineer"  # Adding a new key-value pair
+print(person)  # Output: {'name': 'Alice', 'age': 31, 'city': 'New York', 'hair_color': 'brown', 'occupation': 'Engineer'}
+```
+
+Notice how this is the same syntax we used to modify an existing key's value.
+
+## Removing key-value pairs
+
+You can remove key-value pairs from a dictionary using the `del` statement or the `pop()` method.
+Let's remove key-value pairs from the `person` dictionary using both methods:
+
+```python
+person = {
+    "name": "Alice",
+    "age": 31,
+    "city": "New York",
+    "hair_color": "brown",
+    "occupation": "Engineer"
+}
+
+# Using del statement
+del person["hair_color"]
+print(person)  # Output: {'name': 'Alice', 'age': 31, 'city': 'New York', 'occupation': 'Engineer'}
+# Using pop() method
+occupation = person.pop("occupation")
+print(person)  # Output: {'name': 'Alice', 'age': 31, 'city': 'New York'}
+print(occupation)  # Output: Engineer
+```
+In this example, we first used the `del` statement to remove the key-value pair with the key `"hair_color"`.
+
+Then we used the `pop()` method to remove the key-value pair with the key `"occupation"` and stored the removed value in the variable `occupation`.
+
+

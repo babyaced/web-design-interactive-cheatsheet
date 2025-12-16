@@ -1,0 +1,30 @@
+# Match Case
+
+The `match` statement in Python allows you to compare a value against a series of patterns and execute code based on which pattern matches.
+
+Here's a simple example of how to use `match` and `case` statements:
+
+Let's say we want to print a message based on the day of the week:
+
+```python
+day = "Monday"
+
+match day:
+    case "Monday":
+        print("Start of the work week!")
+    case "Wednesday":
+        print("We're halfway through the week!")
+    case "Friday":
+        print("It's almost the weekend!")
+    case _:
+        print("Just another day.")
+```
+
+In this example, the `match` statement checks the value of the `day` variable against each `case`.
+
+- If `day` is `"Monday"`, it prints "Start of the work week!"
+- If `day` is `"Wednesday"`, it prints "We're halfway through the week!"
+- If `day` is `"Friday"`, it prints "It's almost the weekend!"
+- The `_` case is a wildcard that matches anything not covered by the previous cases, so it prints "Just another day." for any other value of `day`.
+
+You can see in the above explanation that the `match` statement is similar to having multiple `if`, `elif`, and `else` statements, but it is much more readable and clean.
