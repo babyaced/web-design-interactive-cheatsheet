@@ -4,7 +4,7 @@ import {Callout} from 'nextra/components'
 
 Lists are ordered collections of items. Lists are a type of data type in Python referred to as a data structure.
 
-Items in a list can be of any data type, including numbers, strings, and even other lists.
+Items in a list can be of any data type, including numbers, strings, and even other data structures like lists.
 
 ## Creating a List
 
@@ -19,14 +19,14 @@ fruits = ["apple", "banana", "cherry"]
 mixed = [1, "apple", 3.14, True]
 ```
 
-In the example above, you may have noticed that lists can contain items of different data types. 
+In the example above, you may have noticed that the list stored in the variable `mixed` contained items of different data types. 
 Usually lists contain items of the same data type, but Python allows for mixed data types as well.
 
 ## Accessing List Items
 
 You may be wondering how to access items in a list. You can do this by using the index of the item you want to access.
 
-Be aware that the first item in a list has an index of `0`, the second item has an index of `1`, and so on.
+*Be aware that the first item in a list has an index of `0`*, the second item has an index of `1`, and so on.
 
 To access an item in a list, you can use square brackets `[]` with the index of the item you want to access inside the brackets.
 
@@ -57,7 +57,7 @@ print(fruits)  # Output: ['apple', 'blueberry', 'cherry']
 
 ## List Methods
 
-Lists come with several built-in methods that allow you to manipulate and work with them easily. Here are some commonly used list methods:
+Lists come with several *built-in methods* that allow you to manipulate and work with them easily. Here are some commonly used list methods:
 
 - `append()`: Adds an item to the end of the list.
   
@@ -89,7 +89,7 @@ Lists come with several built-in methods that allow you to manipulate and work w
     print(fruits)  # Output: ['apple', 'cherry', 'banana']
     ```
 <Callout type="info" title="Note about insert()">
-Notice how the `insert()` method shifts the item currently at that position (if any) and any subsequent items to the right.
+Notice how the `insert()` method shifts the item currently at that position (if there is one) and any subsequent items to the right.
 </Callout>
 
 - `sort()`: Sorts the items in the list in ascending order.

@@ -1,0 +1,43 @@
+# Project 3: Generative Art
+In this project, you will create a simple generative art program using Python.
+
+# Stage 1: Setting up your Project Environment
+- Learning Objective: Get comfortable with setting up a Python project environment
+- Tasks:
+    - Install Pillow library for image creation and manipulation.
+- Topics Covered:
+    - [Setting up Python Environment](../../GettingStarted/SettingUpPythonEnvironment/page.mdx)
+    - [Installing Packages with pip](../../GettingStarted/InstallingPackages/page.mdx)
+
+# Stage 2: Creating the ArtElement class
+- Learning Objective: Learn how to create a class to represent an individual object.
+- Tasks:
+    - Define a class named `ArtElement` that will represent a basic shape in your generative art.
+        - Define attributes for position, height, width, and color.
+        - Create a constructor method (`__init__`) that initializes the attributes of the class.
+        - create a method called `draw` that will draw the shape onto an image canvas.
+- Topics Covered:
+    - [Classes and Objects](../../Variables/TypesOfVariables/DataStructures/Objects/page.mdx)
+
+# Stage 3: Creating the Canvas Class
+- Learning Objective: Learn how to create a class that manages a collection of objects.
+- Tasks:
+    - Define a class named `Canvas` that will represent your digital canvas.
+        - Define attributes for height, width, and background color.
+        - Create a constructor method that will create a blank image with a specified height, width, and background color.
+        - Write a method called `add_element` that takes an `ArtElement` object as a parameter and draws it onto the canvas.
+        - Create a method called `render` that loops through the stored `ArtElement` objects and calls their `draw` method to render them onto the canvas.
+- Topics Covered:
+    - [Classes and Objects](../../Variables/TypesOfVariables/DataStructures/Objects/page.m
+    - [Loops](../../ControlFlow/Loops/page.mdx)
+
+# Stage 4: Composing and Generating Art
+- Create a function:
+    - that creates a `Canvas` object
+    - Generates multiple `ArtElement` objects with random attributes (position, size, color)
+    - Adds them to the canvas
+    - Render the final image and save it to a file.
+- Topics Covered:
+    - [Loops](../../ControlFlow/Loops/page.mdx)
+    - [Random Module](../../Modules/StandardLibrary/Random/page.mdx)
+

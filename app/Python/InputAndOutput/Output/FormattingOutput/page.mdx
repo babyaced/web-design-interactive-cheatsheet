@@ -1,0 +1,81 @@
+# Formatting Output
+
+When displaying output in Python, you may want to format it so its easier to read.
+Python provides several ways to format strings for output. Here are some common methods:
+
+## Using f-strings (Python 3.6+)
+
+F-strings provide a way to embed expressions inside string literals, using curly braces `{}`. They are prefixed with the letter `f`.
+
+```python
+# Example of f-string formatting
+name = "Alice"
+age = 30
+print(f"Name: {name}, Age: {age}")
+```
+
+This will output:
+
+```
+Name: Alice, Age: 30
+```
+
+You can use the variable names directly inside the curly braces, and Python will replace them with their values. 
+However this only works if you prefix the string with `f` as shown above.
+
+## Using the `format()` method
+The `format()` method allows you to format strings by placing curly braces `{}` as placeholders within the string and then calling the `format()` method on the string.
+
+```python
+# Example of format() method
+name = "Bob"
+age = 25
+print("Name: {}, Age: {}".format(name, age))
+```
+
+Here the first `{}` is replaced by the first argument given to the format method (`name`) and the second `{}` is replaced by the second argument given to the format method (`age`).
+
+This will output:
+
+```
+Name: Bob, Age: 25
+```
+
+## Using the `%` operator
+The `%` operator can also be used for string formatting. 
+It uses format specifiers to indicate where to insert values.
+
+```python
+# Example of % operator formatting
+name = "Charlie"
+age = 28
+print("Name: %s, Age: %d" % (name, age))
+```
+
+Here the placeholders are `%s`  and `%d` . 
+The values to be inserted are provided in parentheses after the `%` operator. They are inserted in the order they appear.
+
+
+This will output:
+
+```
+Name: Charlie, Age: 28
+```
+
+You may be wondering why we use the letters `s` and `d` in the placeholders.
+
+- `%s` is used for strings.
+- `%d` is used for integers (decimal numbers).
+- `%f` is used for floating-point numbers.
+
+This means you can format different types of data appropriately. 
+You must make sure to use the correct format specifier for the type of data you are inserting.
+
+## Summary
+
+We have covered three common methods for formatting output in Python: f-strings, the `format()` method, and the `%` operator.
+
+Try each one out to see which you prefer!
+
+
+

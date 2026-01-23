@@ -5,12 +5,15 @@ Objects are a fundamental data structure in Python and programming in general.
 An object is a collection of related data and functionality.
 In Python, everything is an object, including numbers, strings, lists, and even functions.
 
+Objects area are created using **classes**. You can think of a class as a blueprint for creating objects.
+A class defines the properties and behaviors that the objects created from it will have.
+
 <Callout type="info" heading="A Note on Terminology">
 In Python and other programming languages, when you refer to a function that is part of a class, it is called a <u>method</u>.
 </Callout>
 
-## Creating Objects
-You can create an object in Python using the `class` keyword.
+## Creating Classes
+You can create a class in Python using the `class` keyword.
 Here's an example of a simple class that represents a `Dog`:
 
 ```python
@@ -29,7 +32,7 @@ my_dog = Dog()
 The my_dog variable now represents a specific dog object with the species "Canis familiaris" and number of legs 4.
 
 What if you wanted to create multiple dogs with different names and ages though?
-For that, we will have to learn about constructors and instance variables, which we will cover in the next section!
+For that, we will have to learn about constructors and instance variables, which we will cover later.
 
 ### Object methods
 
@@ -69,7 +72,7 @@ A **constructor** is a special function that is called when an object is created
 
 We often use a constructor to initialize the unique properties of an object.
 
-In Python, we have to define the constructor function using the `__init__` method.
+In Python, we have to define the constructor function by defining the `__init__` method.
 
 Here's an example of how to use a constructor to create a `Dog` class with unique `name` and `age` properties:
 
@@ -84,7 +87,7 @@ class Dog:
 ```
 
 
-In this example, we defined a constructor using the `__init__` method that takes two parameters: `name` and `age`.
+In this example, we created a constructor by defining the `__init__` method that takes two parameters: `name` and `age`.
 
 The `self` parameter is a reference to the current **instance** of the class and is used to access variables that belong to the class.
 
@@ -95,10 +98,18 @@ dog1 = Dog("Buddy", 3)
 dog2 = Dog("Max", 5)
 ```
 
+
 To use the constructor, we simply write the class name followed by parentheses, passing in the required **arguments**.
 
 In this case, we created two dog objects: `dog1` with the name "Buddy" and age 3, and `dog2` with the name "Max" and age 5.
 Each dog object has its own unique `name` and `age` **instance variables**, while still sharing the same `species` and `number_of_legs` **class variables**.
+
+The concept of `self` can be a bit tricky to understand at first.
+So let's break down what is happening in the constructor.
+
+When we create a new dog object using `Dog("Buddy", 3)`, 
+the `__init__` method is called with `self` referring to the new dog object being created aka its "self".
+The `name` of this new Dog object is set to "Buddy", and `age` set to 3.
 
 ## Accessing Object properties
 

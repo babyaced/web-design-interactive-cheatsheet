@@ -1,0 +1,41 @@
+# What is Variable Scope?
+
+Variable Scope is a fundamental concept in programming that determines where you can access a variable.
+
+There are two main types of variable scope in Python:
+
+# Global Scope
+
+A variable defined in the global scope is accessible from anywhere in the code, including inside functions. 
+
+Global variables are defined outside of any function at the "top" level of the Python file.
+
+Another way to think about global scope is that the variable declaration is not indented!
+
+```python
+
+x = 10  # Global variable
+
+def print_global():
+    print(x)  # Accessing the global variable inside a function
+```
+
+print_global()  # Output: 10
+```
+
+# Local Scope
+
+A variable defined in the local scope is only accessible within the function where it is defined.
+
+Local variables are created when a function is called and destroyed when the function exits.
+
+```python
+def my_function():
+    y = 5  # Local variable
+    print(y)  # Accessing the local variable inside the function
+my_function()  # Output: 5
+print(y)  # This will raise an error because y is not defined outside the function
+```
+
+
+
